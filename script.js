@@ -58,8 +58,18 @@ are larger than the average.
 function betterThanAverage(arr) {
     var sum = 0;
     // calculate the average
-    var count = 0
+    var count = 0;
     // count how many values are greater than the average
+    for (b = 0; b < arr.length; b++){
+        sum += arr[b];
+
+    }
+    var average = sum / arr.length;
+    for (b = 0; b < arr.length; b++){
+        if (arr[b] > average){
+            count++;
+        }
+    }
     return count;
 }
 var result = betterThanAverage([6, 8, 3, 10, -2, 5, 9]);
